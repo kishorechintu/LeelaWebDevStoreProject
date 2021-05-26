@@ -1,0 +1,11 @@
+<div class="my-lg-4">
+  <div>{{ value }}</div>
+  <input type="text" class="form-control" [(ngModel)]="value" />
+  <span
+    ><button class="btn btn-primary my-2" (click)="onAdd()">
+      Add to Counter
+    </button></span
+  >
+
+  <button class="btn btn-success" (click)="onChangedText()">ChangeText</button>
+</div>
