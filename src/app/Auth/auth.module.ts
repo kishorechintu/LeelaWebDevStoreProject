@@ -33,6 +33,6 @@ export const routes: Routes = [
     FormsModule,
     EffectsModule.forFeature([]),
     RouterModule.forChild(routes),
-  ],
+  ]
 })
 export class AuthModule {}

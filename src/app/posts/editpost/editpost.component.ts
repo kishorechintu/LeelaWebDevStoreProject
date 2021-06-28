@@ -17,12 +17,14 @@ export class EditpostComponent implements OnInit {
   post: Post;
   constructor(private route: ActivatedRoute, private store: Store<AppState>, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params.subscribe((params) => {
-      const id: number = Number(params.id);
+      console.log("****** params is ---", params)
+      const id = params.id;
+      // const id: string = '-MawD_PPfoHqOEnTWKuQ';
+      console.log("****** id is --", id)
       this.store.select(getPostById, { id }).subscribe((data) => {
         this.post = data;
-        console.log('* post is **', this.post);
         this.createFormData();
       });
     });

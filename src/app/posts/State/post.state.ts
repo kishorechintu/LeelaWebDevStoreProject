@@ -3,22 +3,11 @@ export interface PostState {
 }
 
 export interface Post {
-  id?: number;
+  id?: number | string;
   title: string;
   description: string;
 }
 
 export const postInitialState: PostState = {
-  postsList: [
-    {
-      id: 1,
-      title: 'first title',
-      description: 'first Description',
-    },
-    {
-      id: 2,
-      title: 'second title',
-      description: 'second Description',
-    },
-  ],
+  postsList: [],
 };
